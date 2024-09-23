@@ -86,3 +86,18 @@ Examples
     noexcept member function
 
 */
+
+/*####################
+# Destructor are Implicitly noexcept
+####################*/
+
+/*
+- The Compiler will assume a class destructor is noexcept if
+    - All members of the class have a noexcept destructor
+    - All parents classes have a noexcept destructor
+
+This allows existing code to benefit from having "noexcept" destructors, with no changes
+
+however, it is better to write "noexcept" explicitly in new code
+
+*/
